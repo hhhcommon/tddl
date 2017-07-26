@@ -79,7 +79,9 @@
 		<module>tddl-group</module>
 		<module>tddl-repo-mysql</module>
 		<module>tddl-repo-hbase</module>
+		<!-- 
 		<module>tddl-repo-oceanbase</module>
+		 -->
 		<module>tddl-repo-demo</module>
 		<module>tddl-optimizer</module>
 		<module>tddl-executor</module>
@@ -120,17 +122,26 @@
 			<dependency>
 				<groupId>com.taobao.diamond</groupId>
 				<artifactId>diamond-client</artifactId>
+				<!-- 
 				<version>3.6.8</version>
+				 -->
+				<version>edas-3.7.3</version>
 			</dependency>
 			<dependency>
 				<groupId>com.taobao.diamond</groupId>
 				<artifactId>diamond-utils</artifactId>
+				<!-- 
 				<version>3.1.4</version>
+				 -->
+				<version>3.2.0</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
+				<!-- 
 				<version>1.0.6</version>
+				 -->
+				<version>1.0.19</version>
 			</dependency>
 			<dependency>
 				<groupId>org.codehaus.groovy</groupId>
@@ -295,6 +306,7 @@
 					<excludes>
 						<exclude>**/*NoRunTest.java</exclude>
 					</excludes>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -17,11 +17,13 @@
 			<artifactId>tddl-common</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- 
 		<dependency>
 		  <groupId>com.alibaba.external</groupId>
 		  <artifactId>test.junit</artifactId>
 		  <version>4.8.1</version>
 		  <scope>test</scope>
 		</dependency>
+		 -->
 	</dependencies>
 </project>

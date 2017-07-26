@@ -27,12 +27,13 @@
 			<artifactId>tddl-config-diamond</artifactId>
 			<version>${project.version}</version>
 		</dependency>
+		<!-- 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>tddl-repo-oceanbase</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<!-- 
+		
 		<dependency>
 			<groupId>${project.groupId}</groupId>
 			<artifactId>tddl-repo-hbase</artifactId>

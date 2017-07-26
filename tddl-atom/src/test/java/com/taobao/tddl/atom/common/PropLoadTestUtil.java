@@ -23,10 +23,14 @@ public class PropLoadTestUtil {
         for (Entry<Object, Object> entry : prop.entrySet()) {
             String key = (String) entry.getKey();
             String value = (String) entry.getValue();
+            if(sb.length() > 0) {
+            	sb.append("\r\n");
+            }
             sb.append(key);
-            sb.append("=");
-            sb.append(value);
-            sb.append("\r\n");
+            if(value != null && value.length() > 0) {
+            	sb.append("=");
+            	sb.append(value);
+            }
         }
         data = sb.toString();
         return data;

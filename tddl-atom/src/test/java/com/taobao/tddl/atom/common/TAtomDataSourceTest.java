@@ -251,6 +251,7 @@ public class TAtomDataSourceTest extends BaseAtomTest {
                                                                                                    Exception {
         String appName = "tddl_sample";
         String dbKey = "unitTestDb-" + dbType;
+        dbKey = "tddl_sample_0";
         String configName = "";
         String testSql = TAtomDataSourceTest.TEST_SQL;
         configName = dbType;
@@ -296,6 +297,7 @@ public class TAtomDataSourceTest extends BaseAtomTest {
                             String methodName) throws IOException, TddlException, Exception {
         String appName = "tddl_sample";
         String dbKey = "unitTestDb-" + methodName;
+        dbKey = "tddl_sample_0";
         String configName = dbType;
         String testSql = TAtomDataSourceTest.TEST_SQL;
         TAtomDataSource tAtomDataSource = createTAtomDataSource(appName, dbKey, configName);

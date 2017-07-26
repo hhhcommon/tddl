@@ -609,7 +609,7 @@ public class TAtomDsConfHandle extends AbstractLifecycle implements Lifecycle {
             localDruidDataSource.setName(dbKey + "_" + version.getAndIncrement());
             localDruidDataSource.setTestOnBorrow(false);
             localDruidDataSource.setTestWhileIdle(true);
-            localDruidDataSource.setLogDiffrentThread(false);// 关闭日志警告
+            localDruidDataSource.setLogDifferentThread(false);// 关闭日志警告
 
             // localDruidDataSource.setFilters(DEFAULT_TDDL_DRUID_FILTERS);
             localDruidDataSource.setUsername(tAtomDsConfDO.getUserName());

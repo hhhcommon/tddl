@@ -59,7 +59,8 @@ public class TAtomConfParserUnitTest {
     @Test
     public void parserPasswd_解析密码() throws IOException, InvalidKeyException, NoSuchAlgorithmException,
                                    NoSuchPaddingException, IllegalBlockSizeException, BadPaddingException {
-        String passwdFile = "conf/oracle/passwd.properties";
+        System.out.println(new PasswordCoder().encode("tddl", "JJ1988113"));
+    	String passwdFile = "conf/oracle/passwd.properties";
         String passwdStr = PropLoadTestUtil.loadPropFile2String(passwdFile);
         String passwd = TAtomConfParser.parserPasswd(passwdStr);
         Properties prop = PropLoadTestUtil.loadPropFromFile(passwdFile);

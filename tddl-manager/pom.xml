@@ -133,7 +133,9 @@
 		<dependency>
 			<groupId>com.taobao.diamond</groupId>
 			<artifactId>diamond-client</artifactId>
+			<!-- 
 			<version>3.6.8</version>
+			 -->
 			<!-- <exclusions> <exclusion> <artifactId>log4j</artifactId> <groupId>log4j</groupId> 
 				</exclusion> </exclusions> -->
 		</dependency>
@@ -189,7 +191,7 @@
 						<exclude>**/manager/test/*.java</exclude>
 						<exclude>**/jdbcmock/testcase/*.java</exclude>
 					</excludes>
-					<skip>false</skip>
+					<skip>true</skip>
 				</configuration>
 			</plugin>
 			<plugin>
