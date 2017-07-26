@@ -29,14 +29,14 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
 
     private void restore() throws Exception {
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         Map re = null;
         try {
             re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         } catch (Exception ex) {
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         }
@@ -61,7 +61,7 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
@@ -72,20 +72,20 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3300\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3300\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
 
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         try {
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3300\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3300\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             Assert.fail();
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
@@ -96,7 +96,7 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal\r\ndbType=mysql\r\ndbStatus=RW\r\n");
 
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         try {
@@ -109,7 +109,7 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
@@ -121,20 +121,20 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=oracle\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=oracle\r\ndbStatus=RW\r\n");
 
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         try {
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=oracle\r\ndbStatus=RW\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=oracle\r\ndbStatus=RW\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             Assert.fail();
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(time, String.valueOf(re.get("gmt_create")));
@@ -147,21 +147,21 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(nextDay, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(nextDay, String.valueOf(re.get("gmt_create")));
         try {
             tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { time, RANDOM_ID });
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { time, RANDOM_ID });
             Assert.fail();
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
 
         tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { time, RANDOM_ID });
@@ -177,7 +177,7 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(nextDay, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=W\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=W\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         int result = tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?",
             new Object[] { time, RANDOM_ID });
@@ -186,14 +186,14 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         try {
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=W\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=W\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
             Assert.fail();
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
 
         tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { nextDay, RANDOM_ID });
@@ -209,12 +209,12 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         Map re = tddlJT.queryForMap("select * from normaltbl_0001 where pk=?", new Object[] { RANDOM_ID });
         Assert.assertEquals(nextDay, String.valueOf(re.get("gmt_create")));
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=NA\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=NA\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
         try {
             tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { time, RANDOM_ID });
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=NA\r\n");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=NA\r\n");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
             tddlJT.update("update normaltbl_0001 set gmt_create=? where pk=?", new Object[] { time, RANDOM_ID });
             Assert.fail();
@@ -226,7 +226,7 @@ public class AtomDynamicChangeGlobalTest extends AtomTestCase {
         } catch (Exception ex) {
         }
         MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-            "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
+            "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=RW\r\n");
         TimeUnit.SECONDS.sleep(SLEEP_TIME);
     }
 

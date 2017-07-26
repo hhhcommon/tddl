@@ -302,7 +302,7 @@ public class GroupSelectDbUseWeightTest extends GroupTestCase {
         /* 有部分DS没有设置权重值 */
         for (int i = 0; i < 2; i++) {
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=NA");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=NA");
             MockServer.setConfigInfo(tds.getFullDbGroupKey(), "qatest_normal_0:wr1,,qatest_normal_1_bac:r3");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
         }
@@ -332,7 +332,7 @@ public class GroupSelectDbUseWeightTest extends GroupTestCase {
         // 恢复配置(确保推送成功)
         for (int i = 0; i < 2; i++) {
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=RW");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=RW");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
         }
     }

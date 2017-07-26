@@ -250,11 +250,11 @@ public class GroupSelectDbUseRwTest extends GroupTestCase {
         // 将3个库全部设置为只读(确保推送成功)
         for (int i = 0; i < 2; i++) {
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=R");
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=R");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=R");
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_1_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_1_bac\r\ndbType=mysql\r\ndbStatus=R");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_1_bac\r\ndbType=mysql\r\ndbStatus=R");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
         }
 
@@ -271,11 +271,11 @@ public class GroupSelectDbUseRwTest extends GroupTestCase {
         // 恢复(确保推送成功)
         for (int i = 0; i < 2; i++) {
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=WR");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0\r\ndbType=mysql\r\ndbStatus=WR");
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_0_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=WR");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_0_bac\r\ndbType=mysql\r\ndbStatus=WR");
             MockServer.setConfigInfo(TAtomConstants.getGlobalDataId(DBKEY_1_BAC),
-                "ip=10.232.31.154\r\nport=3306\r\ndbName=qatest_normal_1_bac\r\ndbType=mysql\r\ndbStatus=WR");
+                "ip=rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com\r\nport=3306\r\ndbName=qatest_normal_1_bac\r\ndbType=mysql\r\ndbStatus=WR");
             TimeUnit.SECONDS.sleep(SLEEP_TIME);
         }
     }
