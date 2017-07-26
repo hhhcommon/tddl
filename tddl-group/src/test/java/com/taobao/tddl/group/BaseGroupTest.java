@@ -78,7 +78,7 @@ public class BaseGroupTest {
         ds.setDriverClassName("com.mysql.jdbc.Driver");
         ds.setUsername("tddl");
         ds.setPassword("tddl");
-        ds.setUrl("jdbc:mysql://10.232.31.154/tddl_sample_" + num);
+        ds.setUrl("jdbc:mysql://rm-wz9h5hd1d1a8c7886o.mysql.rds.aliyuncs.com/tddl_sample_" + num);
         return ds;
 
     }
